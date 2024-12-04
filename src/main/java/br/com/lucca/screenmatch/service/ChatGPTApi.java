@@ -10,7 +10,7 @@ import java.util.List;
 public class ChatGPTApi {
     public static String obterTraducao(String texto) {
         try {
-            OpenAiService service = new OpenAiService("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");
+            OpenAiService service = new OpenAiService("a key fica aq");
             ChatMessage mensagem = new ChatMessage("user", "traduza para o português o texto: " + texto);
 
             ChatCompletionRequest requisicao = ChatCompletionRequest.builder()
