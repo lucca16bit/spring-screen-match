@@ -1,6 +1,7 @@
 package br.com.lucca.screenmatch.model;
 
 import br.com.lucca.screenmatch.service.ChatGPTApi;
+import br.com.lucca.screenmatch.service.MyMemoryApi;
 
 import java.util.OptionalDouble;
 
@@ -20,7 +21,7 @@ public class Serie {
         this.genero = Categoria.fromString(dadosSerie.genero().split(",")[0].trim()); // split basicamente faz com q ignore valores apos a virgula, pegando somente a primeira opção
         this.atores = dadosSerie.atores();
         this.poster = dadosSerie.poster();
-        this.sinopse = ChatGPTApi.obterTraducao(dadosSerie.sinopse()).trim();
+        this.sinopse = MyMemoryApi.obterTraducao(dadosSerie.sinopse()).trim();
     }
 
     public String getTitulo() {
